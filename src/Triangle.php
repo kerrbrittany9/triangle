@@ -42,14 +42,30 @@
             $this->side3 = (float) $new_side3;
         }
 
-        function type()
+        function equilateral()
         {
             if ($this->side1 == $this->side2 = $this->side3) {
-                return "Equilateral"
-            } elseif (($this->side1 == $this->side2) || ($this->side1 == $this->side3) || ($this->side2 == $this->side3)) {
-                return "Isosceles"
-            } elseif ($this->side1 !== $this->side2 !== $this->side3) {
-                return "Scalene"
+                return true
+            } else {
+                return false;
+            }
+        }
+
+        function isosceles()
+        {
+            if (($this->side1 == $this->side2) || ($this->side1 == $this->side3) || ($this->side2 == $this->side3)) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+        function scalene()
+        {
+            if ($this->side1 !== $this->side2 !== $this->side3) {
+                return true
+            } else {
+                return false
             }
         }
     }
