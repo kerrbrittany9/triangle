@@ -36,5 +36,10 @@
         </html>";
     });
 
+    $app->get("/triangle_type", function() {
+
+        $new_triangle = new Triangle($_GET['side1'], ($_GET['side2'], $_GET['side3']))
+    }
+
     return $app;
 ?>
