@@ -38,8 +38,14 @@
 
     $app->get("/triangle_type", function() {
 
-        $new_triangle = new Triangle($_GET['side1'], ($_GET['side2'], $_GET['side3']))
-    }
+        $new_triangle = new Triangle($_GET['side1'], $_GET['side2'], $_GET['side3']);
+        return "<h2>Your Triangle Defined</h2>
+        <p>Length: " . $new_triangle->getSide1() . "</p>
+        <p>Width: " . $new_triangle->getSide2() . "</p>
+        <p>Height: " . $new_triangle->getSide3() . "</p>
+        <p>Triangle Type: " . $new_Triangle->type() . "</p>";
+
+    });
 
     return $app;
 ?>

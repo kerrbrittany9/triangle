@@ -1,9 +1,9 @@
 <?php
     class Triangle
     {
-        private = $side1;
-        private = $side2;
-        private = $side3;
+        private  $side1;
+        private  $side2;
+        private  $side3;
 
 
         function __construct($side1, $side2, $side3)
@@ -24,7 +24,7 @@
 
         function getSide3()
         {
-            return $this->sideside2
+            return $this->side3;
         }
 
         function setSide1($new_side1)
@@ -42,6 +42,16 @@
             $this->side3 = (float) $new_side3;
         }
 
+        function type()
+        {
+            if ($this->side1 == $this->side2 = $this->side3) {
+                return "Equilateral"
+            } elseif (($this->side1 == $this->side2) || ($this->side1 == $this->side3) || ($this->side2 == $this->side3)) {
+                return "Isosceles"
+            } elseif ($this->side1 !== $this->side2 !== $this->side3) {
+                return "Scalene"
+            }
+        }
     }
 
 
