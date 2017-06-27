@@ -43,7 +43,7 @@
         <p>Length: " . $new_triangle->getSide1() . "</p>
         <p>Width: " . $new_triangle->getSide2() . "</p>
         <p>Height: " . $new_triangle->getSide3() . "</p>
-        <p>Triangle Type: " . $new_Triangle->equilateral . "</p>";
+        <p>Triangle Type: " . $new_triangle->type() . "</p>";
 
     });
 

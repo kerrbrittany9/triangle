@@ -42,34 +42,17 @@
             $this->side3 = (float) $new_side3;
         }
 
-        function equilateral()
+        function type()
         {
-            if ($this->side1 == $this->side2 = $this->side3) {
-                return true
-            } else {
-                return false;
-            }
-        }
-
-        function isosceles()
-        {
-            if (($this->side1 == $this->side2) || ($this->side1 == $this->side3) || ($this->side2 == $this->side3)) {
-                return true
-            } else {
-                return false
-            }
-        }
-
-        function scalene()
-        {
-            if ($this->side1 !== $this->side2 !== $this->side3) {
-                return true
-            } else {
-                return false
+            if (($this->side1 + $this->side2 < $this->side3) || ($this->side1 + $this->side3 < $this->side2) || ($this->side2 + $this->side3 < $this->side1)) {
+                return "this is not a triangle - the sum of two sides cannot be smaller than the third side";
+            } elseif (($this->side1 == $this->side2) && ($this->side1 == $this->side3)) {
+                return "equilateral";
+            } elseif (($this->side1 === $this->side2) || ($this->side1 === $this->side3) || ($this->side2 === $this->side3)) {
+                return "isosceles";
+            } elseif (($this->side1 !== $this->side2) && ($this->side2 !== $this->side3) && ($this->side3 !== $this->side2)) {
+                return "scalene";
             }
         }
     }
-
-
-
  ?>
